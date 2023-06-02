@@ -9,7 +9,10 @@ public class ItemCollector : MonoBehaviour
 {
     private int Oranges = 0;
 
-    [SerializeField] private TMP_Text CollectiblesTxt;
+    public HealthBar health;
+
+    public int maxhealth = 4;
+    public int currenthealth;
 
     [SerializeField] private AudioSource collectionSoundEffect;
 
@@ -29,18 +32,31 @@ public class ItemCollector : MonoBehaviour
         {
             collectionSoundEffect.Play();
             Destroy(collision.gameObject);
-            Oranges++;
-            CollectiblesTxt.text = "Collectibles: " + Oranges;
+            GainLife(1);
+            
         }
        else if (collision.gameObject.CompareTag("Pomme"))
         {
             collectionSoundEffect.Play();
             Destroy(collision.gameObject);
             Oranges+=2;
-            CollectiblesTxt.text = "Collectibles: " + Oranges;
+          
         }
 
       
+    }
+
+    public void GainLife(int life)
+    {
+        currenthealth += life;
+
+        health.SetHealth(currenthealth);
+
+        if (currenthealth >= 4)
+        {
+            health.SetHealth(maxhealth);
+        }
+
     }
     public int GetOranges()
     {

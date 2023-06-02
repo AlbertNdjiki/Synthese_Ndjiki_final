@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnLittleFlame : MonoBehaviour
 {
     public GameObject flamePrefab;
+    public GameObject enemyPrefab;
     public float respawnTime = 5.0f;
     private Vector2 screenBounds;
     public int pointage = 0;
@@ -23,7 +24,9 @@ public class SpawnLittleFlame : MonoBehaviour
     private void spawnEnemy()
     {
         GameObject a = Instantiate(flamePrefab) as GameObject;
-        a.transform.position = new Vector2(screenBounds.x *-2, Random.Range(-screenBounds.y, screenBounds.y));
+        GameObject b = Instantiate(enemyPrefab) as GameObject;
+        a.transform.position = new Vector2(screenBounds.x *-1, Random.Range(-screenBounds.y, screenBounds.y));
+        b.transform.position = new Vector2(screenBounds.x * -1, Random.Range(-screenBounds.y, screenBounds.y));
         pointage++;
         Debug.Log(pointage);
         
@@ -48,6 +51,7 @@ public class SpawnLittleFlame : MonoBehaviour
 
     private void Update()
      {
+
        if (pointage % 5 == 0 && pointage!=0 && _estChanger == false)
        {
        AugmentVitesseEnnemi();

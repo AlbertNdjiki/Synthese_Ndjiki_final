@@ -150,7 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 21
   horizontal: 1
-  speed: 7
+  speed: 11
   offset: 0
 --- !u!95 &91393865580025328
 Animator:

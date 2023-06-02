@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     private SpriteRenderer sprite;
     private Animator anim;
 
+  
+
     [SerializeField] private float _delai = 0.5f;
 
     private bool facR = true;
@@ -21,7 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
-    private enum MovementState { idle, running, jumping, falling }
+    private enum MovementState { idle, running, jumping, attack }
 
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource fireSoundEffect;
@@ -33,6 +35,8 @@ public class Player : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        Score.scoreValue = 0;
+
     }
 
     private void Update()
@@ -61,9 +65,16 @@ public class Player : MonoBehaviour
         }
     }
 
+    
+
     private void UpdateAnimation()
     {
         MovementState state;
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && IsGrounded())
+        {
+            state = MovementState.attack;
+        }
         if (dirX > 0f && facR)
         {
 
@@ -96,10 +107,7 @@ public class Player : MonoBehaviour
             state = MovementState.jumping;
             createDust();
         }
-        else if (rb.velocity.y < -.1f)
-        {
-            state = MovementState.falling;
-        }
+        
         anim.SetInteger("state", (int)state);
     }
 
@@ -119,6 +127,8 @@ public class Player : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
         
     }
+
+   
 
 
 }

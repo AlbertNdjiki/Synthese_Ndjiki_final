@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4606713135301314821
+--- !u!1 &2970911880906748395
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8127850050063224420}
-  - component: {fileID: 7490195216778788913}
-  - component: {fileID: 4809549214732598700}
-  - component: {fileID: 3283761605779407413}
-  - component: {fileID: -8563317461315031609}
-  - component: {fileID: 6382507417259218445}
+  - component: {fileID: 2970911880906747921}
+  - component: {fileID: 2970911880906748398}
+  - component: {fileID: 2970911880906748399}
+  - component: {fileID: 2970911880906748396}
+  - component: {fileID: 2970911880906748397}
+  - component: {fileID: 2970911880906748394}
   m_Layer: 0
   m_Name: LittleFlame
   m_TagString: Pieges
@@ -21,28 +21,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8127850050063224420
+--- !u!4 &2970911880906747921
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606713135301314821}
+  m_GameObject: {fileID: 2970911880906748395}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.2619, y: 4.0108, z: 0}
+  m_LocalPosition: {x: 27.629557, y: 8.350016, z: 0}
   m_LocalScale: {x: 0.33029965, y: 0.36291552, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7490195216778788913
+--- !u!212 &2970911880906748398
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606713135301314821}
+  m_GameObject: {fileID: 2970911880906748395}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -88,14 +88,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4809549214732598700
+--- !u!95 &2970911880906748399
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606713135301314821}
+  m_GameObject: {fileID: 2970911880906748395}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c90ef97dcea1a492d83422d566f60f1e, type: 2}
@@ -108,13 +108,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!61 &3283761605779407413
+--- !u!61 &2970911880906748396
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606713135301314821}
+  m_GameObject: {fileID: 2970911880906748395}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -134,14 +134,14 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &-8563317461315031609
+--- !u!50 &2970911880906748397
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606713135301314821}
+  m_GameObject: {fileID: 2970911880906748395}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -155,17 +155,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6382507417259218445
+--- !u!114 &2970911880906748394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4606713135301314821}
+  m_GameObject: {fileID: 2970911880906748395}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc53a8cc012a848d88114ca471afd49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KillsTxt: {fileID: 0}
   speed: 20
-  rb: {fileID: -8563317461315031609}
+  rb: {fileID: 2970911880906748397}

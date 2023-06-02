@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EnemyDamage : MonoBehaviour
 {
 
+
+    private int pointage=0;
     public int health = 100;
 
     // Start is called before the first frame update
@@ -20,6 +23,8 @@ public class EnemyDamage : MonoBehaviour
         health -= damage;
 
         if (health <= 0){
+            Score.scoreValue += 1;
+            pointage++;
             Die();
         }
         
@@ -27,6 +32,10 @@ public class EnemyDamage : MonoBehaviour
 
     void Die()
     {
+       
         Destroy(gameObject);
     }
+
+   
+    
 }

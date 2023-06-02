@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float distance = 21f; //Distance that moves the object
+    public float distance = 42f; //Distance that moves the object
     public bool horizontal = true; //If the movement is horizontal or vertical
     public float speed = 7f;
     public float offset = 0f; //If yo want to modify the position at the start 
@@ -75,6 +75,7 @@ public class Enemy : MonoBehaviour
 
     void Die ()
     {
+        
         Destroy(gameObject);
     }
 }
